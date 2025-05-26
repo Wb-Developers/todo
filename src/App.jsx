@@ -11,7 +11,7 @@ function App() {
 useEffect(()=>{
   if(!localStorage){return}
   let previousList = JSON.parse(localStorage.getItem('list'));
-  setTasks(previousList);
+  previousList && setTasks(previousList);
 },[])
 
 function addTodo() {
